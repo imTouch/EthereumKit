@@ -20,9 +20,9 @@ public struct Address {
             self.raw = raw
         } else if let hex = data as? String {
             self.raw = Data(hex: hex.stripHexPrefix())!
+        } else {
+            throw AddressError.invalid
         }
-        
-        throw AddressError.invalid
     }
 }
 

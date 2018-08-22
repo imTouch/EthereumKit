@@ -30,7 +30,9 @@ public class PublicKey {
         }
         self.data = data
     }
-    
+}
+
+extension PublicKey: CustomStringConvertible {
     public var description: String {
         return data.hexEncodedString()
     }
