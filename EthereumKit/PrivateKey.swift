@@ -8,29 +8,72 @@
 
 import Foundation
 
-public class PublicKey {
+public final class PrivateKey: Hashable, CustomStringConvertible {
+    /// Validates that raw data is a valid private key.
     static public func isValid(data: Data) -> Bool {
-        if data.count != 65 {
+        // Check length
+        if data.count != 32 {
             return false
         }
-        return data[0] == 4
+        
+        // Check for zero address
+        guard data.contains(where: { $0 != 0 }) else {
+            return false
+        }
+        
+        return true
     }
     
-    public let data: Data
+    /// Raw representation of the private key.
+    public private(set) var data: Data
     
-    public var address: Address {
-        let hash = Crypto.hash(data[1...])
-        return try! Address(hash.suffix(20))
+    /// Creates a new private key.
+    public init() {
+        let privateAttributes: [String: Any] = [
+            kSecAttrIsExtractable as String: true,
+            ]
+        let parameters: [String: Any] = [
+            kSecAttrKeyType as String: kSecAttrKeyTypeEC,
+            kSecAttrKeySizeInBits as String: 256,
+            kSecPrivateKeyAttrs as String: privateAttributes,
+            ]
+        
+        guard let privateKey = SecKeyCreateRandomKey(parameters as CFDictionary, nil) else {
+            fatalError("Failed to generate key pair")
+        }
+        guard var keyRepresentation = SecKeyCopyExternalRepresentation(privateKey, nil) as Data? else {
+            fatalError("Failed to extract new private key")
+        }
+        defer {
+            keyRepresentation.clear()
+        }
+        data = Data(keyRepresentation.suffix(32))
     }
     
     public init?(data: Data) {
-        if !PublicKey.isValid(data: data) {
+        if !PrivateKey.isValid(data: data) {
             return nil
         }
-        self.data = data
+        self.data = Data(data)
+    }
+    
+    deinit {
+        data.clear()
+    }
+    
+    public func publicKey() -> PublicKey {
+        return PublicKey(data: Crypto.getPublicKey(from: data))!
     }
     
     public var description: String {
         return data.hexEncodedString()
+    }
+    
+    public var hashValue: Int {
+        return data.hashValue
+    }
+    
+    public static func == (lhs: PrivateKey, rhs: PrivateKey) -> Bool {
+        return lhs.data == rhs.data
     }
 }
