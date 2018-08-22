@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45D3D188CC1B9215390961E9 /* Pods_EthereumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C3126304E29CA59EF8E327 /* Pods_EthereumKit.framework */; };
+		C37683222125559C004DCED2 /* EthereumKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C37683202125559C004DCED2 /* EthereumKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3768329212555C3004DCED2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3768328212555C3004DCED2 /* Address.swift */; };
+		C376832B21255646004DCED2 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376832A21255646004DCED2 /* Unit.swift */; };
+		C376832D21255B6D004DCED2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376832C21255B6D004DCED2 /* Network.swift */; };
+		C376832F21255B7E004DCED2 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376832E21255B7E004DCED2 /* PrivateKey.swift */; };
+		C376833121255B8B004DCED2 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376833021255B8B004DCED2 /* PublicKey.swift */; };
+		C376833321255CDD004DCED2 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376833221255CDD004DCED2 /* RLP.swift */; };
+		C376833C21257A0A004DCED2 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376833B21257A0A004DCED2 /* Signature.swift */; };
+		C376833E21257A63004DCED2 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376833D21257A63004DCED2 /* Hash.swift */; };
+		C376834021257A73004DCED2 /* ECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376833F21257A73004DCED2 /* ECDSA.swift */; };
+		C376834221257ACB004DCED2 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376834121257ACB004DCED2 /* Random.swift */; };
+		C3768348212583E6004DCED2 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3768347212583E6004DCED2 /* String+Hex.swift */; };
+		C376834A212584AB004DCED2 /* Data+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3768349212584AB004DCED2 /* Data+Hex.swift */; };
+		C3D5123A212D78230019178D /* Crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D51238212D78230019178D /* Crypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3D5123B212D78230019178D /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D51239212D78230019178D /* Crypto.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19C3126304E29CA59EF8E327 /* Pods_EthereumKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D76517421C1C1D282991BF4 /* Pods-EthereumKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKit/Pods-EthereumKit.release.xcconfig"; sourceTree = "<group>"; };
+		BDA266FCEB5101BF75725272 /* Pods-EthereumKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumKit/Pods-EthereumKit.debug.xcconfig"; sourceTree = "<group>"; };
+		C376831D2125559C004DCED2 /* EthereumKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EthereumKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37683202125559C004DCED2 /* EthereumKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EthereumKit.h; sourceTree = "<group>"; };
+		C37683212125559C004DCED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3768328212555C3004DCED2 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		C376832A21255646004DCED2 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		C376832C21255B6D004DCED2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C376832E21255B7E004DCED2 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		C376833021255B8B004DCED2 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
+		C376833221255CDD004DCED2 /* RLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLP.swift; sourceTree = "<group>"; };
+		C376833B21257A0A004DCED2 /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		C376833D21257A63004DCED2 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		C376833F21257A73004DCED2 /* ECDSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSA.swift; sourceTree = "<group>"; };
+		C376834121257ACB004DCED2 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		C3768347212583E6004DCED2 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
+		C3768349212584AB004DCED2 /* Data+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Hex.swift"; sourceTree = "<group>"; };
+		C3D51238212D78230019178D /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		C3D51239212D78230019178D /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C37683192125559C004DCED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D3D188CC1B9215390961E9 /* Pods_EthereumKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		723867ABAAD476FC94BCDF80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19C3126304E29CA59EF8E327 /* Pods_EthereumKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C37683132125559C004DCED2 = {
+			isa = PBXGroup;
+			children = (
+				C376831F2125559C004DCED2 /* EthereumKit */,
+				C376831E2125559C004DCED2 /* Products */,
+				FB937605BD2AE72A3DC7C043 /* Pods */,
+				723867ABAAD476FC94BCDF80 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C376831E2125559C004DCED2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C376831D2125559C004DCED2 /* EthereumKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C376831F2125559C004DCED2 /* EthereumKit */ = {
+			isa = PBXGroup;
+			children = (
+				C376834321257EBC004DCED2 /* Encoding */,
+				C3768334212564D7004DCED2 /* Crypto */,
+				C3768346212583D3004DCED2 /* Extension */,
+				C376832C21255B6D004DCED2 /* Network.swift */,
+				C376832E21255B7E004DCED2 /* PrivateKey.swift */,
+				C376833021255B8B004DCED2 /* PublicKey.swift */,
+				C3768328212555C3004DCED2 /* Address.swift */,
+				C376832A21255646004DCED2 /* Unit.swift */,
+				C37683202125559C004DCED2 /* EthereumKit.h */,
+				C37683212125559C004DCED2 /* Info.plist */,
+			);
+			path = EthereumKit;
+			sourceTree = "<group>";
+		};
+		C3768334212564D7004DCED2 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				C3D51238212D78230019178D /* Crypto.h */,
+				C3D51239212D78230019178D /* Crypto.m */,
+				C376833D21257A63004DCED2 /* Hash.swift */,
+				C376833F21257A73004DCED2 /* ECDSA.swift */,
+				C376834121257ACB004DCED2 /* Random.swift */,
+				C376833B21257A0A004DCED2 /* Signature.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		C376834321257EBC004DCED2 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				C376833221255CDD004DCED2 /* RLP.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		C3768346212583D3004DCED2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C3768347212583E6004DCED2 /* String+Hex.swift */,
+				C3768349212584AB004DCED2 /* Data+Hex.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FB937605BD2AE72A3DC7C043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA266FCEB5101BF75725272 /* Pods-EthereumKit.debug.xcconfig */,
+				9D76517421C1C1D282991BF4 /* Pods-EthereumKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C376831A2125559C004DCED2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37683222125559C004DCED2 /* EthereumKit.h in Headers */,
+				C3D5123A212D78230019178D /* Crypto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C376831C2125559C004DCED2 /* EthereumKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37683252125559C004DCED2 /* Build configuration list for PBXNativeTarget "EthereumKit" */;
+			buildPhases = (
+				FE05B808EF20ABA7FE4D3201 /* [CP] Check Pods Manifest.lock */,
+				C37683182125559C004DCED2 /* Sources */,
+				C37683192125559C004DCED2 /* Frameworks */,
+				C376831A2125559C004DCED2 /* Headers */,
+				C376831B2125559C004DCED2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EthereumKit;
+			productName = EthereumKit;
+			productReference = C376831D2125559C004DCED2 /* EthereumKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C37683142125559C004DCED2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Crypto Touch";
+				TargetAttributes = {
+					C376831C2125559C004DCED2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = C37683172125559C004DCED2 /* Build configuration list for PBXProject "EthereumKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C37683132125559C004DCED2;
+			productRefGroup = C376831E2125559C004DCED2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C376831C2125559C004DCED2 /* EthereumKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C376831B2125559C004DCED2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE05B808EF20ABA7FE4D3201 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EthereumKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C37683182125559C004DCED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3768329212555C3004DCED2 /* Address.swift in Sources */,
+				C3768348212583E6004DCED2 /* String+Hex.swift in Sources */,
+				C376832B21255646004DCED2 /* Unit.swift in Sources */,
+				C376833321255CDD004DCED2 /* RLP.swift in Sources */,
+				C376833C21257A0A004DCED2 /* Signature.swift in Sources */,
+				C376834A212584AB004DCED2 /* Data+Hex.swift in Sources */,
+				C376832D21255B6D004DCED2 /* Network.swift in Sources */,
+				C3D5123B212D78230019178D /* Crypto.m in Sources */,
+				C376834021257A73004DCED2 /* ECDSA.swift in Sources */,
+				C376833121255B8B004DCED2 /* PublicKey.swift in Sources */,
+				C376833E21257A63004DCED2 /* Hash.swift in Sources */,
+				C376832F21255B7E004DCED2 /* PrivateKey.swift in Sources */,
+				C376834221257ACB004DCED2 /* Random.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C37683232125559C004DCED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C37683242125559C004DCED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C37683262125559C004DCED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA266FCEB5101BF75725272 /* Pods-EthereumKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EthereumKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cryptotouch.EthereumKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C37683272125559C004DCED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D76517421C1C1D282991BF4 /* Pods-EthereumKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EthereumKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cryptotouch.EthereumKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C37683172125559C004DCED2 /* Build configuration list for PBXProject "EthereumKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37683232125559C004DCED2 /* Debug */,
+				C37683242125559C004DCED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37683252125559C004DCED2 /* Build configuration list for PBXNativeTarget "EthereumKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37683262125559C004DCED2 /* Debug */,
+				C37683272125559C004DCED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C37683142125559C004DCED2 /* Project object */;
+}
