@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Data {
+public extension Data {
     func sign(_ privateKey: Data) -> Data {
         return Crypto.sign(hash: self, privateKey: privateKey)
     }

@@ -9,12 +9,12 @@
 import Foundation
 import RLP_ObjC
 
-enum RLPError : Error {
+public enum RLPError : Error {
     case decode
     case encode
 }
 
-struct RLP {
+public struct RLP {
     static func encode(_ data: [Data]) -> Data {
         return rlp_encode(data)
     }

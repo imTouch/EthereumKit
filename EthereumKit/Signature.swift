@@ -9,7 +9,7 @@
 import Foundation
 import CryptoSwift
 
-struct Signature {
+public struct Signature {
     let v: Data
     let r: Data
     let s: Data

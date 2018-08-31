@@ -21,7 +21,7 @@ import Foundation
  * @param {Data} data.s EC signature parameter
  * @param {Data} data.chainId EIP 155 chainId - mainnet: 1, ropsten: 3
  * */
-struct Transaction {
+public struct Transaction {
     let raw: Data
     
     var nonce: Data { return try! RLP.decode(raw)[0] }
