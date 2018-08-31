@@ -19,7 +19,7 @@ public struct Address {
         if let raw = data as? Data {
             self.raw = raw
         } else if let hex = data as? String {
-            self.raw = Data(hex: hex.stripHexPrefix())!
+            self.raw = Data(hex: hex)
         } else {
             throw AddressError.invalid
         }
@@ -35,9 +35,9 @@ extension Address: CustomStringConvertible {
 extension Address {
     /// Converts the address to an EIP55 checksumed representation.
     fileprivate static func computeEIP55String(for data: Data) -> String {
-        let addressString = data.hexEncodedString()
+        let addressString = data.toHexString()
         let hashInput = addressString.data(using: .ascii)!
-        let hash = Crypto.hash(hashInput).hexEncodedString()
+        let hash = Crypto.hash(hashInput).toHexString()
         
         var string = "0x"
         for (a, h) in zip(addressString, hash) {

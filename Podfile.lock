@@ -1,16 +1,24 @@
 PODS:
+  - CryptoSwift (0.11.0)
+  - RLP-ObjC (1.0.5)
   - TrezorCrypto (0.0.8)
 
 DEPENDENCIES:
+  - CryptoSwift
+  - RLP-ObjC (~> 1.0)
   - TrezorCrypto
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+    - RLP-ObjC
     - TrezorCrypto
 
 SPEC CHECKSUMS:
+  CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
+  RLP-ObjC: a999411362b75a876d9727b2987c9b334b2fd5f7
   TrezorCrypto: 938c4b715fff7824a9c891a105e65ee0e4e81662
 
-PODFILE CHECKSUM: 9b63ef73fd103ecef88c2572f834074013147392
+PODFILE CHECKSUM: e38efab6c055411f4e4056879ff903ec6651dbe6
 
 COCOAPODS: 1.5.3

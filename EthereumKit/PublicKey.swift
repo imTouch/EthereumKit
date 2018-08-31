@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import CryptoSwift
 
 public class PublicKey {
     static public func isValid(data: Data) -> Bool {
@@ -34,6 +35,6 @@ public class PublicKey {
 
 extension PublicKey: CustomStringConvertible {
     public var description: String {
-        return data.hexEncodedString()
+        return data.toHexString()
     }
 }
