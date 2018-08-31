@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = 'EthereumKit'
-  s.version      = '0.0.1'
+  s.version      = '0.1.0'
   s.summary      = 'Ethereum Support.'
   s.homepage     = 'https://github.com/imTouch/EthereumKit'
   s.authors      = 'Liu Pengpeng'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
   s.swift_version = '4.0'
 
   s.source       = { git: 'https://github.com/imTouch/EthereumKit.git', tag: "v#{s.version}" }
