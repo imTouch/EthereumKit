@@ -13,7 +13,7 @@ public enum AddressError: Error {
 }
 
 public struct Address {
-    let raw: Data
+    public let raw: Data
     
     public init(_ data: Any) throws {
         if let raw = data as? Data {

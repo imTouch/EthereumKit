@@ -11,7 +11,7 @@ import Foundation
 import CryptoSwift
 
 public class PublicKey {
-    static public func isValid(data: Data) -> Bool {
+    public static func isValid(data: Data) -> Bool {
         if data.count != 65 {
             return false
         }

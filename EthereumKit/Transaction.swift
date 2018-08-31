@@ -22,7 +22,7 @@ import Foundation
  * @param {Data} data.chainId EIP 155 chainId - mainnet: 1, ropsten: 3
  * */
 public struct Transaction {
-    let raw: Data
+    public let raw: Data
     
     var nonce: Data { return try! RLP.decode(raw)[0] }
     var gasLimit: Data { return try! RLP.decode(raw)[1] }
@@ -34,7 +34,7 @@ public struct Transaction {
     var r: Data { return try! RLP.decode(raw)[7] }
     var s: Data { return try! RLP.decode(raw)[8] }
     
-    init(_ serialized: Data, privateKey: Data) throws {
+    public init(_ serialized: Data, privateKey: Data) throws {
         var decoded = try RLP.decode(serialized)
         decoded = Array(decoded[0..<6])
         
@@ -49,7 +49,7 @@ public struct Transaction {
         self.raw = RLP.encode(decoded)
     }
     
-    func isValid(addressTo: String, amount: Decimal) -> Bool {
+    public func isValid(addressTo: String, amount: Decimal) -> Bool {
         var value = amount
         let data = Data(buffer: UnsafeBufferPointer(start: &value, count: 1))
         return data == self.to && Data(hex: addressTo) == to

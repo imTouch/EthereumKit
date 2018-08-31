@@ -10,18 +10,18 @@ import Foundation
 import CryptoSwift
 
 public struct Signature {
-    let v: Data
-    let r: Data
-    let s: Data
+    public let v: Data
+    public let r: Data
+    public let s: Data
     
-    init(_ hash: Data, privateKey: Data) throws {
+    public init(_ hash: Data, privateKey: Data) throws {
         let sig = Crypto.sign(hash: hash, privateKey: privateKey);
         self.v = Data(hex: String(format:"%02X", sig[64] + 27))
         self.r = sig[0..<32]
         self.s = sig[32..<64]
     }
     
-    init(_ sig: Data) throws {
+    public init(_ sig: Data) throws {
         self.v = Data(hex: String(format:"%02X", sig[64] + 27))
         self.r = sig[0..<32]
         self.s = sig[32..<64]

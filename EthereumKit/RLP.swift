@@ -15,11 +15,11 @@ public enum RLPError : Error {
 }
 
 public struct RLP {
-    static func encode(_ data: [Data]) -> Data {
+    public static func encode(_ data: [Data]) -> Data {
         return rlp_encode(data)
     }
     
-    static func decode(_ serialized: Data) throws -> [Data] {
+    public static func decode(_ serialized: Data) throws -> [Data] {
         guard let decoded = rlp_decode(serialized) as? [Data] else {
             throw RLPError.decode
         }
