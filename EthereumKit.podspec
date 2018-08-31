@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
 
   s.source       = { git: 'https://github.com/imTouch/EthereumKit.git', tag: "v#{s.version}" }
   s.source_files = 'EthereumKit/**/*.{h,m,swift}'
-  s.public_header_files = 'EthereumKit/EthereumKit.h', 'EthereumKit/Crypto/Crypto.h'
 
   s.dependency 'TrezorCrypto'
   s.dependency 'CryptoSwift'
