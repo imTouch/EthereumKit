@@ -34,6 +34,18 @@ public struct Transaction {
     var r: Data { return try! RLP.decode(raw)[7] }
     var s: Data { return try! RLP.decode(raw)[8] }
     
+    public init(_ data: [Data], privateKey: Data) throws {
+        let txHash = RLP.encode(data).sha3(.keccak256)
+        
+        let sig = try Signature(txHash, privateKey: privateKey)
+        
+        decoded.append(sig.v);
+        decoded.append(sig.r)
+        decoded.append(sig.s);
+        
+        self.raw = RLP.encode(decoded)
+    }
+    
     public init(_ serialized: Data, privateKey: Data) throws {
         var decoded = try RLP.decode(serialized)
         decoded = Array(decoded[0..<6])
