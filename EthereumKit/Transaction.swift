@@ -39,11 +39,7 @@ public struct Transaction {
         
         let sig = try Signature(txHash, privateKey: privateKey)
         
-        data.append(sig.v);
-        data.append(sig.r)
-        data.append(sig.s);
-        
-        self.raw = RLP.encode(data)
+        self.raw = RLP.encode(data + [sig.v, sig.r, sig.s])
     }
     
     public init(_ serialized: Data, privateKey: Data) throws {
