@@ -53,13 +53,45 @@ public struct Transaction {
         decoded.append(sig.v);
         decoded.append(sig.r)
         decoded.append(sig.s);
-
+        
         self.raw = RLP.encode(decoded)
     }
     
     public func isValid(addressTo: String, amount: Decimal) -> Bool {
-        var value = amount
-        let data = Data(buffer: UnsafeBufferPointer(start: &value, count: 1))
-        return data == self.to && Data(hex: addressTo) == to
+        if (Data(hex: addressTo) == to) {
+            return amount == Decimal(self.value.toHexString(), base: 16)
+        }
+        
+        let regex = try! NSRegularExpression(pattern: "^a9059cbb000000000000000000000000[a-fA-F0-9]{40}[a-fA-F0-9]{64}$", options: .caseInsensitive)
+        
+        let input = self.data.toHexString()
+        let isMatch = regex.numberOfMatches(in: input, options: [], range: NSRange(location: 0, length: input.count)) > 0
+        if (isMatch) {
+            let toStartIndex = input.index(input.startIndex, offsetBy: 32)
+            let toEndIndex = input.index(toStartIndex, offsetBy: 39)
+            let tokenTo = Data(hex: String(input[toStartIndex...toEndIndex]))
+            
+            let tokenAmount = Decimal(String(input[toEndIndex...]), base: 16)
+            
+            return tokenTo == Data(hex: addressTo) && tokenAmount == amount
+        }
+        return false
+    }
+}
+
+public extension Decimal {
+    init(_ string: String, base: Int) {
+        var decimal: Decimal = 0
+        
+        let digits = string
+            .map { String($0) }
+            .map { Int($0, radix: base)! }
+        
+        for digit in digits {
+            decimal *= Decimal(base)
+            decimal += Decimal(digit)
+        }
+        
+        self.init(string: decimal.description)!
     }
 }
