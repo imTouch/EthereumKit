@@ -70,8 +70,9 @@ public struct Transaction {
             let toStartIndex = input.index(input.startIndex, offsetBy: 32)
             let toEndIndex = input.index(toStartIndex, offsetBy: 39)
             let tokenTo = Data(hex: String(input[toStartIndex...toEndIndex]))
-            
-            let tokenAmount = Decimal(String(input[toEndIndex...]), base: 16)
+
+            let amountEndIndex = input.index(toStartIndex, offsetBy: 40)
+            let tokenAmount = Decimal(String(input[amountEndIndex...]), base: 16)
             
             return tokenTo == Data(hex: addressTo) && tokenAmount == amount
         }
