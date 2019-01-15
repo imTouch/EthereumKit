@@ -25,11 +25,12 @@ public class PublicKey {
         return try! Address(hash.suffix(20))
     }
     
-    public init?(data: Data) {
-        if !PublicKey.isValid(data: data) {
-            return nil
+    public init?(data: Data, compressed: Bool = false) {
+        if compressed {
+            self.data = Crypto.uncompressPublicKey(from: data)
+        } else {
+            self.data = data
         }
-        self.data = data
     }
 }
 

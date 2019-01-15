@@ -1,7 +1,7 @@
 PODS:
-  - CryptoSwift (0.11.0)
+  - CryptoSwift (0.13.1)
   - RLP-ObjC (1.0.5)
-  - TrezorCrypto (0.0.8)
+  - TrezorCrypto (0.0.9)
 
 DEPENDENCIES:
   - CryptoSwift
@@ -15,9 +15,9 @@ SPEC REPOS:
     - TrezorCrypto
 
 SPEC CHECKSUMS:
-  CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
+  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
   RLP-ObjC: a999411362b75a876d9727b2987c9b334b2fd5f7
-  TrezorCrypto: 938c4b715fff7824a9c891a105e65ee0e4e81662
+  TrezorCrypto: bfeea47a052dca2c77d4a39e1e183865e52de14d
 
 PODFILE CHECKSUM: e38efab6c055411f4e4056879ff903ec6651dbe6
 
